@@ -9,7 +9,7 @@ export default class Pricing {
     }
 
     if (currency instanceof Currency) {
-      this._currency = currency; 
+      this._currency = currency;
     } else {
       throw new TypeError('currency must be validcurrency');
     }
@@ -37,7 +37,7 @@ export default class Pricing {
   // create setter for the currency
   set currency(currency) {
     if (currency instanceof Currency) {
-      this._currency = currency; 
+      this._currency = currency;
     } else {
       throw new TypeError('currency must be validcurrency');
     }
