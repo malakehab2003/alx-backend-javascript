@@ -1,10 +1,10 @@
 export const cpp: Subjects.Cpp = new Subjects.Cpp();
 export const java: Subjects.Java = new Subjects.Java();
 export const react: Subjects.React = new Subjects.React();
-export const cTeacher: Subjects.Teacher {
-  experienceTeachingC = 10,
-  firstName = 'david',
-  lastName = 'tony',
+export const cTeacher: Subjects.Teacher = {
+  experienceTeachingC: 10,
+  firstName: 'david',
+  lastName: 'tony',
 };
 
 console.log('C++');
