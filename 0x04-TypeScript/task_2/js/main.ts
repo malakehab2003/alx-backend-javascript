@@ -46,4 +46,18 @@ export function createEmployee(salary: (number | string)): (Teacher | Director) 
   return new Director();
 };
 
+export function isDirector(employee: (Teacher | Director)): boolean {
+  if (employee instanceof Director) {
+    return true;
+  }
+  return false;
+};
+
+export function executeWork(employee: (Teacher | Director)): string {
+  if (employee instanceof Teacher) {
+    return 'workTeacherTasks';
+  }
+  return 'workDirectorTasks';
+};
+
 
