@@ -2,16 +2,15 @@
  * say hello and enter your name
  */
 
-console.log('Welcome to Holberton School, what is your name?');
-process.stdin.setEncoding('utf-8');
+process.stdout.write('Welcome to Holberton School, what is your name?\n');
+process.stdin.on('readable', () => {
+  const chunk = process.stdin.read();
 
-process.stdin.on('data', (data) => {
-  const name = data.trim();
-  console.log(`Your name is: ${name}`);
-  process.exit();
+  if (chunk) {
+    process.stdout.write(`Your name is: ${chunk}`);
+  }
 });
 
-process.on('exit', () => {
-  console.log('This important software is now closing');
+process.stdin.on('end', () => {
+  process.stdout.write('This important software is now closing\n');
 });
-
