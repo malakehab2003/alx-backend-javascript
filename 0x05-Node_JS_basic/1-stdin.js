@@ -15,4 +15,3 @@ process.on('exit', () => {
   console.log('This important software is now closing');
 });
 
-process.stdin.resume();
