@@ -1,7 +1,7 @@
 const { expect } = require('chai');
 const calculateNumber = require('./1-calcul');
 
-describe("test calculateNumber with type", () => {
+describe("test calculateNumber with type with chai", () => {
     it("test sum with round to up", () => {
         expect(calculateNumber('SUM', 1.4, 4.5)).to.equal(6)
     });
